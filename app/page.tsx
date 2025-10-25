@@ -1,65 +1,78 @@
-import Image from "next/image";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { GraduationCap, Palette, ExternalLink } from "lucide-react";
+
+const products = [
+  {
+    name: "K2AI Education",
+    icon: GraduationCap,
+    description: "Nền tảng giáo dục AI tiên tiến, cung cấp các khóa học và tài liệu học tập về trí tuệ nhân tạo, machine learning và deep learning. Giúp học viên nắm vững kiến thức từ cơ bản đến nâng cao.",
+    url: "http://edu.k2aihub.com",
+    color: "text-blue-600",
+    bgColor: "bg-blue-50",
+  },
+  {
+    name: "K2AI Creator Studio",
+    icon: Palette,
+    description: "Công cụ sáng tạo nội dung thông minh sử dụng AI, giúp người dùng tạo ra các nội dung đa phương tiện, thiết kế đồ họa, và sản xuất nội dung chất lượng cao một cách nhanh chóng và hiệu quả.",
+    url: "https://creator.k2aihub.com",
+    color: "text-purple-600",
+    bgColor: "bg-purple-50",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      {/* Hero Section */}
+      <header className="container mx-auto px-4 py-16 text-center">
+        <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-4">
+          K2AI Hub
+        </h1>
+        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          Nền tảng công nghệ AI tiên tiến
+        </p>
+        <p className="mt-3 text-lg text-slate-500 max-w-3xl mx-auto">
+          Khám phá các sản phẩm AI của chúng tôi, từ giáo dục đến sáng tạo nội dung
+        </p>
+      </header>
+
+      {/* Products Section */}
+      <main className="container mx-auto px-4 pb-16">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {products.map((product) => {
+            const Icon = product.icon;
+            return (
+              <Card key={product.name} className="hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className={`w-12 h-12 rounded-lg ${product.bgColor} flex items-center justify-center mb-4`}>
+                    <Icon className={`w-6 h-6 ${product.color}`} />
+                  </div>
+                  <CardTitle className="text-2xl">{product.name}</CardTitle>
+                  <CardDescription className="text-base">
+                    {product.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter>
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors"
+                  >
+                    Truy cập {product.name}
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </CardFooter>
+              </Card>
+            );
+          })}
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="container mx-auto px-4 py-8 text-center text-slate-500 border-t border-slate-200">
+        <p>&copy; {new Date().getFullYear()} K2AI Hub. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
