@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "K2AI Hub - Nền tảng công nghệ AI tiên tiến",
-  description: "K2AI Hub - Nền tảng công nghệ AI tiên tiến cung cấp các sản phẩm giáo dục và công cụ sáng tạo",
+  title: "K2AI Hub - Advanced AI technology platform",
+  description: "K2AI Hub - Advanced AI technology platform providing educational products and creative tools",
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
+    <html lang="en">
       <body className="antialiased">
         {children}
       </body>
