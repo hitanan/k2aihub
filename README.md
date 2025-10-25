@@ -1,2 +1,3 @@
-# k2aihub
-2AI home page, A single page to display all products of K2AI
+# K2AI
+## Advanced AI Technology Platform
+Explore our AI products, from education to content creation
