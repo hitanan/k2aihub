@@ -5,7 +5,7 @@ const products = [
   {
     name: "K2AI Education",
     icon: GraduationCap,
-    description: "Nền tảng giáo dục AI tiên tiến, cung cấp các khóa học và tài liệu học tập về trí tuệ nhân tạo, machine learning và deep learning. Giúp học viên nắm vững kiến thức từ cơ bản đến nâng cao.",
+    description: "Smart learning platform with the mission of providing high-quality education through advanced AI technology and innovative teaching methods",
     url: "http://edu.k2aihub.com",
     color: "text-blue-600",
     bgColor: "bg-blue-50",
@@ -13,7 +13,7 @@ const products = [
   {
     name: "K2AI Creator Studio",
     icon: Palette,
-    description: "Công cụ sáng tạo nội dung thông minh sử dụng AI, giúp người dùng tạo ra các nội dung đa phương tiện, thiết kế đồ họa, và sản xuất nội dung chất lượng cao một cách nhanh chóng và hiệu quả.",
+    description: "Save 10 hours/week. Supercharge content 10x faster. Paste a YouTube link. Get back a treasure trove of quality content for Twitter, LinkedIn, Reels, Shorts, and Newsletter in minutes. Stop grinding, start creating.",
     url: "https://creator.k2aihub.com",
     color: "text-purple-600",
     bgColor: "bg-purple-50",
@@ -26,13 +26,13 @@ export default function Home() {
       {/* Hero Section */}
       <header className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-4">
-          K2AI Hub
+          K2AI
         </h1>
         <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-          Nền tảng công nghệ AI tiên tiến
+          Advanced AI Technology Platform
         </p>
         <p className="mt-3 text-lg text-slate-500 max-w-3xl mx-auto">
-          Khám phá các sản phẩm AI của chúng tôi, từ giáo dục đến sáng tạo nội dung
+          Explore our AI products, from education to content creation
         </p>
       </header>
 
