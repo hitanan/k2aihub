@@ -28,12 +28,12 @@ const InteractiveFAQ: React.FC<InteractiveFAQProps> = ({ faqs, primaryColor = 'b
         {faqs.map((faq, index) => (
           <details key={index} className="border border-white/10 rounded-xl p-4 sm:p-6 bg-white/5 group">
             <summary className="flex items-center justify-between cursor-pointer">
-              <h3 className="text-lg font-semibold text-white group-hover:text-gray-200 transition-colors">
+              <h3 className="text-lg font-semibold text-black group-hover:text-blue-200 transition-colors">
                 {faq.question}
               </h3>
-              <ChevronDown className="w-5 h-5 text-white group-open:rotate-180 transition-transform" />
+              <ChevronDown className="w-5 h-5 text-black group-open:rotate-180 transition-transform" />
             </summary>
-            <div className="mt-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+            <div className="mt-4 text-black-300 text-sm sm:text-base leading-relaxed">
               <p>{faq.answer}</p>
             </div>
           </details>

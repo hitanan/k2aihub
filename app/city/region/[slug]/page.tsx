@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { citiesData } from "@/data/cities";
+import { citiesData } from "@/src/data/cities";
 import RegionClient from './RegionClient';
 import { createTitle, createDescription, createKeywords } from '@/utils/seo';
 

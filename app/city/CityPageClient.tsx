@@ -8,7 +8,7 @@ import Search from '@/src/components/city/Search';
 import LoadingSpinner from '@/src/components/LoadingSpinner';
 import InteractiveFAQ  from '@/src/components/InteractiveFAQ';
 import { City } from '@/src/types';
-import citiesData from '@/data/cities';
+import { citiesData } from '@/src/data/cities';
 
 export default function CityPageClient() {
   const [cities, setCities] = useState<City[]>([]);

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { createModuleMetadata } from '@/utils/seo';
+import { createModuleMetadata } from '@/src/utils/seo';
 import CityPageClient from './CityPageClient';
 import StructuredData from '@/src/components/StructuredData';
-import { citiesData } from '@/data/cities';
+import { citiesData } from '@/src/data/cities';
 import { City } from '@/src/types';
 
 export const metadata: Metadata = createModuleMetadata(

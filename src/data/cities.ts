@@ -2909,4 +2909,69 @@ export const citiesData: City[] = [
   },
 ];
 
+// Region data with slugs and metadata
+export interface Region {
+  name: string;
+  slug: string;
+  description: string;
+  cities: string[];
+}
+
+export const regionsData: Region[] = [
+  {
+    name: 'Bắc Bộ',
+    slug: 'bac-bo',
+    description: 'Vùng Bắc Bộ bao gồm Hà Nội, Hải Phòng và các tỉnh phía Bắc',
+    cities: citiesData.filter((c) => c.region === 'Bắc Bộ').map((c) => c.slug),
+  },
+  {
+    name: 'Tây Bắc',
+    slug: 'tay-bac',
+    description: 'Vùng Tây Bắc với địa hình núi non hùng vĩ và văn hóa dân tộc đa dạng',
+    cities: citiesData.filter((c) => c.region === 'Tây Bắc').map((c) => c.slug),
+  },
+  {
+    name: 'Đông Bắc',
+    slug: 'dong-bac',
+    description: 'Vùng Đông Bắc với cảnh quan thiên nhiên tuyệt đẹp và nhiều di sản văn hóa',
+    cities: citiesData.filter((c) => c.region === 'Đông Bắc').map((c) => c.slug),
+  },
+  {
+    name: 'Đồng bằng Bắc Bộ',
+    slug: 'dong-bang-bac-bo',
+    description: 'Đồng bằng sông Hồng với nền nông nghiệp phát triển và văn hóa lúa nước',
+    cities: citiesData.filter((c) => c.region === 'Đồng bằng Bắc Bộ').map((c) => c.slug),
+  },
+  {
+    name: 'Bắc Trung Bộ',
+    slug: 'bac-trung-bo',
+    description: 'Vùng Bắc Trung Bộ với nhiều di sản thế giới và cảnh quan thiên nhiên',
+    cities: citiesData.filter((c) => c.region === 'Bắc Trung Bộ').map((c) => c.slug),
+  },
+  {
+    name: 'Nam Trung Bộ',
+    slug: 'nam-trung-bo',
+    description: 'Vùng Nam Trung Bộ với bờ biển dài và tiềm năng du lịch',
+    cities: citiesData.filter((c) => c.region === 'Nam Trung Bộ').map((c) => c.slug),
+  },
+  {
+    name: 'Tây Nguyên',
+    slug: 'tay-nguyen',
+    description: 'Cao nguyên Tây Nguyên với đất đỏ bazan màu mỡ và văn hóa Cồng chiêng',
+    cities: citiesData.filter((c) => c.region === 'Tây Nguyên').map((c) => c.slug),
+  },
+  {
+    name: 'Đông Nam Bộ',
+    slug: 'dong-nam-bo',
+    description: 'Vùng Đông Nam Bộ là trung tâm kinh tế lớn nhất cả nước',
+    cities: citiesData.filter((c) => c.region === 'Đông Nam Bộ').map((c) => c.slug),
+  },
+  {
+    name: 'Đồng bằng sông Cửu Long',
+    slug: 'dong-bang-song-cuu-long',
+    description: 'Đồng bằng sông Cửu Long - vựa lúa của cả nước với hệ thống kênh rạch chằng chịt',
+    cities: citiesData.filter((c) => c.region === 'Đồng bằng sông Cửu Long').map((c) => c.slug),
+  },
+];
+
 export default citiesData;
