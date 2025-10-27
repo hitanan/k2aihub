@@ -11,7 +11,7 @@ export default function NotFound() {
     // Check if this is a moved route
     const redirectMap: Record<string, string> = {
       '/learning': 'https://edu.k2aihub.com/learning',
-      '/games': 'https://edu.k2aihub.com/games',
+      '/practice': 'https://edu.k2aihub.com/practice',
       '/blog': 'https://edu.k2aihub.com/blog',
       '/ai': 'https://edu.k2aihub.com/ai',
       '/feedback': 'https://edu.k2aihub.com/feedback',
@@ -36,7 +36,7 @@ export default function NotFound() {
   // If this is a moved route, show redirect message
   const isMovedRoute = pathname && (
     pathname.startsWith('/learning') ||
-    pathname.startsWith('/games') ||
+    pathname.startsWith('/practice') ||
     pathname.startsWith('/blog') ||
     pathname.startsWith('/ai') ||
     pathname.startsWith('/feedback')

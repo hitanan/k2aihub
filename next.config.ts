@@ -55,6 +55,7 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
     NEXT_PUBLIC_ASSET_PREFIX: assetPrefix,
+    NEXT_PUBLIC_EDUCATION_URL: 'https://edu.k2aihub.com',
   },
 
   // Generate sitemap and other files

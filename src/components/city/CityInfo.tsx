@@ -4,9 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { City } from '@/src/types';
-import { createRegionSlug } from '@/utils/slug';
-import ShareButton from '@/src/components/ShareButton';
+import { createRegionSlug } from '@/src/utils/slug';
+import ShareButton from '@/components/ShareButton';
 import TouristAttractionsSlider from '@/src/components/city/TouristAttractionsSlider';
+import { ExternalLink } from 'lucide-react';
 
 interface CityInfoProps {
   city: City | null;
@@ -175,8 +176,10 @@ const CityInfo: React.FC<CityInfoProps> = ({ city, hoveredCity }) => {
       {!hoveredCity && city && (
         <div className="mt-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-3">Trò chơi học tập</h3>
-          <Link
-            href="/games/vietnamese-heritage-explorer-3d"
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`${process.env.NEXT_PUBLIC_EDUCATION_URL}/practice/vietnamese-heritage-explorer-3d`}
             className="block p-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg text-white hover:scale-105 transform transition-transform duration-200 shadow-lg hover:shadow-xl"
           >
             <div className="flex items-center gap-4">
@@ -188,7 +191,8 @@ const CityInfo: React.FC<CityInfoProps> = ({ city, hoveredCity }) => {
                 </p>
               </div>
             </div>
-          </Link>
+            <ExternalLink className="w-3 h-3 ml-1" />
+          </a>
         </div>
       )}
 

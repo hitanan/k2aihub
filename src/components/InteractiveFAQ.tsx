@@ -20,7 +20,7 @@ const InteractiveFAQ: React.FC<InteractiveFAQProps> = ({ faqs, primaryColor = 'b
 
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10">
-      <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center">
+      <h2 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 flex items-center">
         <HelpCircle className={`w-5 h-5 sm:w-6 sm:h-6 mr-3 text-${primaryColor}-400 flex-shrink-0`} />
         Frequently Asked Questions
       </h2>

@@ -177,7 +177,12 @@ export default function CityPageClient() {
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl shadow-md border border-purple-200 text-center transform hover:scale-105 transition-transform">
             <div className="text-3xl font-bold text-purple-600 mb-2">9</div>
-            <div className="text-sm text-purple-800 font-medium">Vùng Miền</div>
+            <div className="text-sm text-purple-800 font-medium">
+              <Link
+                href="/city/region"
+                className="text-emerald-600 hover:text-emerald-700 font-medium"
+              >Vùng Miền</Link>
+            </div>
           </div>
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-2xl shadow-md border border-orange-200 text-center transform hover:scale-105 transition-transform">
             <div className="text-3xl font-bold text-orange-600 mb-2">102 Triệu</div>

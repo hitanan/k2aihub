@@ -40,7 +40,7 @@ Since k2aihub.com is deployed on GitHub Pages (static hosting), we cannot use se
 The following redirect pages are created in `/app` with catch-all routes:
 
 - `/learning/page.tsx` + `/learning/[...slug]/page.tsx` → redirects to `https://edu.k2aihub.com/learning`
-- `/games/page.tsx` + `/games/[...slug]/page.tsx` → redirects to `https://edu.k2aihub.com/games`
+- `/practice/page.tsx` + `/practice/[...slug]/page.tsx` → redirects to `https://edu.k2aihub.com/games`
 - `/blog/page.tsx` + `/blog/[...slug]/page.tsx` → redirects to `https://edu.k2aihub.com/blog`
 - `/ai/page.tsx` + `/ai/[...slug]/page.tsx` → redirects to `https://edu.k2aihub.com/ai`
 - `/feedback/page.tsx` → redirects to `https://edu.k2aihub.com/feedback`
