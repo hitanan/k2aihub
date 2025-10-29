@@ -82,7 +82,7 @@ export default function RelatedCities({ currentCity, allCities, className = '' }
                 </h3>
                 <p className="text-sm text-gray-600 mb-2">
                   <Link 
-                    href={`/region/${createRegionSlug(city.region)}`}
+                    href={`/city/region/${createRegionSlug(city.region)}`}
                     className="text-blue-600 hover:text-blue-800 hover:underline"
                   >
                     {city.region}
@@ -121,7 +121,7 @@ export default function RelatedCities({ currentCity, allCities, className = '' }
           với nhiều danh lam thắng cảnh và nét văn hóa đặc sắc.
         </p>
         <Link
-          href={`/region/${createRegionSlug(currentCity.region)}`}
+          href={`/city/region/${createRegionSlug(currentCity.region)}`}
           className="inline-block mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
         >
           Xem tất cả tỉnh thành {currentCity.region} →

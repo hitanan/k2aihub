@@ -86,7 +86,7 @@ const CityInfo: React.FC<CityInfoProps> = ({ city, hoveredCity }) => {
           <p className="text-gray-600">
             Vùng miền:{' '}
             <Link
-              href={`/region/${createRegionSlug(displayCity.region)}`}
+              href={`/city/region/${createRegionSlug(displayCity.region)}`}
               className="text-blue-600 hover:text-blue-800 hover:underline"
             >
               {displayCity.region}

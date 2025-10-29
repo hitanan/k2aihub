@@ -74,7 +74,7 @@ const CityPage: React.FC<CityPageProps> = memo(({ city, allCities, structuredDat
             </li>
             <li>/</li>
             <li>
-              <Link href={`/region/${createRegionSlug(city.region)}`} className="hover:text-gray-700">
+              <Link href={`/city/region/${createRegionSlug(city.region)}`} className="hover:text-gray-700">
                 {city.region}
               </Link>
             </li>
@@ -94,7 +94,7 @@ const CityPage: React.FC<CityPageProps> = memo(({ city, allCities, structuredDat
                 <span className="text-sm text-gray-500">Mã đơn vị hành chính: {city.code}</span>
                 <span className="text-sm text-gray-500">•</span>
                 <Link
-                  href={`/region/${createRegionSlug(city.region)}`}
+                  href={`/city/region/${createRegionSlug(city.region)}`}
                   className="text-sm text-blue-600 hover:text-blue-800 hover:underline"
                 >
                   {city.region}
@@ -244,7 +244,7 @@ const CityPage: React.FC<CityPageProps> = memo(({ city, allCities, structuredDat
           <h2 className="text-xl font-semibold text-gray-800 mb-6">
             Các Thành Phố Khác trong{' '}
             <Link
-              href={`/region/${createRegionSlug(city.region)}`}
+              href={`/city/region/${createRegionSlug(city.region)}`}
               className="text-blue-600 hover:text-blue-800 hover:underline"
             >
               {city.region}

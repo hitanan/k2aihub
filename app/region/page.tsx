@@ -111,7 +111,7 @@ export default function RegionsPage() {
           {regions.map((region) => (
             <Link
               key={region.name}
-              href={`/region/${regionSlugs[region.name as keyof typeof regionSlugs]}`}
+              href={`/city/region/${regionSlugs[region.name as keyof typeof regionSlugs]}`}
               className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group"
             >
               <div className="flex items-center justify-between mb-6">

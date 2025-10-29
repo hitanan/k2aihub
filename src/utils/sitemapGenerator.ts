@@ -11,11 +11,11 @@ export function generateSitemapEntries(): MetadataRoute.Sitemap {
   const corePages: MetadataRoute.Sitemap = [
     { url: baseUrl, priority: 1.0, changeFrequency: 'daily' },
     { url: `${baseUrl}/city`, priority: 0.9, changeFrequency: 'weekly' },
-    { url: `${baseUrl}/region`, priority: 0.8, changeFrequency: 'weekly' },
+    { url: `${baseUrl}/city/region`, priority: 0.8, changeFrequency: 'weekly' },
   ];
 
   const regionPages: MetadataRoute.Sitemap = regions.map((region: Region) => ({
-    url: `${baseUrl}/region/${region.slug}`,
+    url: `${baseUrl}/city/region/${region.slug}`,
     lastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
