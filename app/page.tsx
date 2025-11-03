@@ -1,5 +1,5 @@
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/src/components/ui/card";
-import { GraduationCap, Palette, ExternalLink, Map, Sparkles, Zap, Users } from "lucide-react";
+import { GraduationCap, Palette, ExternalLink, Map, Sparkles, Zap, Users, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -8,12 +8,14 @@ import {
   createWebSiteSchema,
   createFAQSchema,
   HOMEPAGE_FAQS,
+  createHomepageStructuredData,
+  createProductStructuredData,
 } from "@/lib/utils/seo";
 import StructuredData from "@/src/components/structured-data";
 
 export const metadata: Metadata = createPageMetadata(
   "K2AI Hub - Advanced AI Technology Platform",
-  "Explore AI-powered solutions: K2AI Education (90+ free learning modules), K2AI Creator Studio (10x faster content creation), and interactive Vietnam Map. Smart learning, content creation, and innovation powered by AI.",
+  "Explore AI-powered solutions: K2AI Education (90+ free learning modules), K2AI Creator Studio (10x faster content creation), K2AI Finance (smart budget tracking), and interactive Vietnam Map. Smart learning, content creation, finance management, and innovation powered by AI.",
   "/",
   [
     "AI platform",
@@ -21,6 +23,9 @@ export const metadata: Metadata = createPageMetadata(
     "smart learning",
     "AI content creation",
     "content repurposing",
+    "AI finance",
+    "budget tracker",
+    "personal finance",
     "AI tools",
     "online learning",
     "Vietnam education",
@@ -31,6 +36,8 @@ export const metadata: Metadata = createPageMetadata(
     "free education",
     "AI powered tools",
     "Vietnam geography",
+    "financial insights",
+    "expense tracking",
   ]
 );
 
@@ -66,15 +73,35 @@ const products = [
     gradient: "from-emerald-500 to-teal-500",
     internal: true,
   },
+  {
+    name: "K2AI Finance",
+    icon: TrendingUp,
+    description: "AI-powered personal budget tracker with smart savings suggestions. Track subscriptions, manage expenses with family, visualize spending patterns, and achieve financial goals with intelligent insights. Save 20% more every month.",
+    features: ["AI Insights", "Family Budgets", "Smart Alerts", "Expense Tracking"],
+    url: "https://finance.k2aihub.com",
+    color: "text-orange-600",
+    bgColor: "bg-orange-50",
+    gradient: "from-orange-500 to-red-500",
+  },
 ];
 
 export default function Home() {
+  const structuredData = createHomepageStructuredData();
+  const educationData = createProductStructuredData('K2AI Education');
+  const creatorData = createProductStructuredData('K2AI Creator Studio');
+  const financeData = createProductStructuredData('K2AI Finance');
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
-      {/* Structured Data for SEO */}
-      <StructuredData data={createOrganizationSchema()} />
-      <StructuredData data={createWebSiteSchema()} />
-      <StructuredData data={createFAQSchema(HOMEPAGE_FAQS)} />
+      {/* Comprehensive Structured Data for SEO */}
+      {structuredData.map((data, index) => (
+        <StructuredData key={index} data={data} />
+      ))}
+
+      {/* Product-specific structured data */}
+      {educationData && <StructuredData data={educationData} />}
+      {creatorData && <StructuredData data={creatorData} />}
+      {financeData && <StructuredData data={financeData} />}
 
       {/* Hero Section */}
       <header className="container mx-auto px-4 py-20 text-center">
@@ -96,7 +123,7 @@ export default function Home() {
         </h2>
         <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8 leading-relaxed">
           Empowering education, creativity, and innovation through AI. Explore smart learning with 90+ free modules, 
-          supercharge your content creation 10x faster, and discover Vietnam interactively.
+          supercharge your content creation 10x faster, manage your finances intelligently, and discover Vietnam interactively.
         </p>
 
         {/* Stats Section */}
@@ -121,9 +148,9 @@ export default function Home() {
           </div>
           <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 shadow-lg">
             <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-2">
-              100%
+              20%
             </div>
-            <div className="text-sm text-slate-600 font-medium">Free Education</div>
+            <div className="text-sm text-slate-600 font-medium">More Savings</div>
           </div>
         </div>
       </header>
@@ -133,11 +160,11 @@ export default function Home() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">Our AI-Powered Products</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Three specialized platforms designed to transform how you learn, create, and explore
+            Four specialized platforms designed to transform how you learn, create, manage finances, and explore
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {products.map((product) => {
             const Icon = product.icon;
             return (
@@ -238,10 +265,10 @@ export default function Home() {
         {/* CTA Section */}
         <div className="mt-24 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 rounded-3xl p-12 text-center shadow-2xl">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-            Ready to Transform Your Learning & Creating?
+            Ready to Transform Your Learning, Creating & Finances?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join thousands of learners and creators using K2AI to achieve their goals faster with AI technology
+            Join thousands of learners, creators, and savers using K2AI to achieve their goals faster with AI technology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -259,6 +286,14 @@ export default function Home() {
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white font-bold rounded-xl hover:bg-white hover:text-purple-600 transition-all hover:scale-105 text-lg"
             >
               Try Creator Studio
+            </a>
+            <a
+              href="https://finance.k2aihub.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white font-bold rounded-xl hover:bg-white hover:text-orange-600 transition-all hover:scale-105 text-lg"
+            >
+              Track Finances Smartly
             </a>
           </div>
         </div>
@@ -285,6 +320,9 @@ export default function Home() {
                 </a>
                 <a href="https://creator.k2aihub.com" className="block text-slate-600 hover:text-purple-600 transition-colors">
                   Creator Studio
+                </a>
+                <a href="https://finance.k2aihub.com" className="block text-slate-600 hover:text-orange-600 transition-colors">
+                  K2AI Finance
                 </a>
                 <a href="/city" className="block text-slate-600 hover:text-emerald-600 transition-colors">
                   Vietnam Map

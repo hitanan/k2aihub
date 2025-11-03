@@ -1,4 +1,5 @@
 # K2AI Hub
+
 ## Advanced AI Technology Platform
 
 K2AI Hub is a comprehensive AI technology platform offering three specialized products designed to transform education, content creation, and interactive learning.
@@ -6,7 +7,9 @@ K2AI Hub is a comprehensive AI technology platform offering three specialized pr
 ## 🌟 Our Products
 
 ### 🎓 [K2AI Education](https://edu.k2aihub.com)
+
 Smart learning platform with **90+ free modules** covering:
+
 - **AI Applications** - Practical AI for daily life
 - **Programming** - Python, JavaScript, and more
 - **STEM** - Science, Technology, Engineering, Math
@@ -14,6 +17,7 @@ Smart learning platform with **90+ free modules** covering:
 - **Essential Skills** - Critical thinking, communication, career development
 
 **Features:**
+
 - 500+ interactive lessons
 - 100+ educational 3D games
 - 1,500+ hours of quality content
@@ -21,7 +25,9 @@ Smart learning platform with **90+ free modules** covering:
 - 100% FREE
 
 ### 🎨 [K2AI Creator Studio](https://creator.k2aihub.com)
+
 AI-powered content repurposing tool that **saves 10 hours/week**:
+
 - Transform YouTube videos into platform-optimized content
 - Generate Twitter threads, LinkedIn posts, Reels, Shorts
 - Create newsletter summaries automatically
@@ -29,7 +35,9 @@ AI-powered content repurposing tool that **saves 10 hours/week**:
 - **10x faster content creation**
 
 ### 🌏 K2AI Vietnam Map
+
 Interactive geographical map featuring:
+
 - All 34 provinces and cities of Vietnam
 - Cultural insights and historical information
 - Economic data and landmarks
