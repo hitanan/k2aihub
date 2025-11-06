@@ -11,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function GamesRedirect() {
-  return <Redirect to="https://edu.k2aihub.com/games" statusCode={301} />;
+  return <Redirect to="https://edu.k2aihub.com/practice" statusCode={301} />;
 }

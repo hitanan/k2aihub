@@ -4,10 +4,6 @@ import Link from "next/link";
 import { Metadata } from "next";
 import {
   createPageMetadata,
-  createOrganizationSchema,
-  createWebSiteSchema,
-  createFAQSchema,
-  HOMEPAGE_FAQS,
   createHomepageStructuredData,
   createProductStructuredData,
 } from "@/lib/utils/seo";
@@ -324,9 +320,9 @@ export default function Home() {
                 <a href="https://finance.k2aihub.com" className="block text-slate-600 hover:text-orange-600 transition-colors">
                   K2AI Finance
                 </a>
-                <a href="/city" className="block text-slate-600 hover:text-emerald-600 transition-colors">
+                <Link href="/city" className="block text-slate-600 hover:text-emerald-600 transition-colors">
                   Vietnam Map
-                </a>
+                </Link>
               </div>
             </div>
             <div>
