@@ -4,7 +4,7 @@ import Link from 'next/link';
 import CityPage from '@/src/components/city/CityPage';
 import LoadingSpinner from '@/src/components/LoadingSpinner';
 import { City } from '@/src/types';
-import { findCityBySlug } from '@/utils/slug';
+import { findCityBySlug } from '@/src/utils/slug';
 import {
   createTitle,
   createDescription,
@@ -13,9 +13,9 @@ import {
   createFAQStructuredData,
   createBreadcrumbStructuredData,
   createPlaceStructuredData,
-} from '@/utils/seo';
-import { SocialSeoPresets } from '@/utils/socialSeo';
-import citiesData from '@/data/cities';
+} from '@/src/utils/seo';
+import { SocialSeoPresets } from '@/src/utils/socialSeo';
+import { citiesData } from '@/src/data/cities';
 
 interface CityPageProps {
   params: Promise<{ slug: string }>;

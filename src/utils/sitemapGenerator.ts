@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
-import { regions } from '@/data/regions';
-import { citiesData } from '@/data/cities';
+import { regions } from '@/src/data/regions';
+import { citiesData } from '@/src/data/cities';
 import { City, Region } from '@/types';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://k2aihub.com';

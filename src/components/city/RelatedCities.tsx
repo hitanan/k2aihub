@@ -4,7 +4,7 @@
 
 import Link from 'next/link';
 import { City } from '@/src/types';
-import { createRegionSlug } from '@/utils/slug';
+import { createRegionSlug } from '@/src/utils/slug';
 
 interface RelatedCitiesProps {
   currentCity: City;

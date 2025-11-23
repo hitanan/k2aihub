@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
-import { citiesData } from "@/data/cities";
-import { createTitle, createDescription, createKeywords } from '@/utils/seo';
+import { citiesData } from "@/src/data/cities";
+import { createTitle, createDescription, createKeywords } from '@/src/utils/seo';
 
 export const metadata: Metadata = {
   title: createTitle("Khám Phá Các Vùng Miền Việt Nam - 9 Vùng Địa Lý"),

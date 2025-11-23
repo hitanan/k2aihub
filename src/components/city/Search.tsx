@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { City } from '@/types';
-import { matchVietnameseText } from '@/utils/vietnamese';
+import { matchVietnameseText } from '@/src/utils/vietnamese';
 
 interface SearchProps {
   cities: City[];

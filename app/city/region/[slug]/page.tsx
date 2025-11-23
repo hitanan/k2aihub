@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { citiesData } from "@/src/data/cities";
 import RegionClient from './RegionClient';
-import { createTitle, createDescription, createKeywords } from '@/utils/seo';
+import { createTitle, createDescription, createKeywords } from '@/src/utils/seo';
 
 // Static region data
 const regions = [

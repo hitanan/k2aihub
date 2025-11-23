@@ -3,9 +3,9 @@
 import React, { memo, useMemo, lazy, Suspense, useEffect } from 'react';
 import Link from 'next/link';
 import { City } from '@/src/types';
-import { createSlug, createRegionSlug } from '@/utils/slug';
+import { createSlug, createRegionSlug } from '@/src/utils/slug';
 import { useRouter } from 'next/navigation';
-import {  optimizeImageLoading } from '@/utils/performance';
+import {  optimizeImageLoading } from '@/src/utils/performance';
 import StructuredData from '@/src/components/StructuredData';
 import TouristAttractionsSlider from '@/src/components/city/TouristAttractionsSlider';
 import ShareButton from '@/src/components/ShareButton';

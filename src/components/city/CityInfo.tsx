@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { City } from '@/src/types';
 import { createRegionSlug } from '@/src/utils/slug';
-import ShareButton from '@/components/ShareButton';
+import ShareButton from '@/src/components/ShareButton';
 import TouristAttractionsSlider from '@/src/components/city/TouristAttractionsSlider';
 import { ExternalLink } from 'lucide-react';
 

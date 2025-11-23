@@ -1,4 +1,4 @@
-import Redirect from '@/components/Redirect';
+import Redirect from '@/src/components/Redirect';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

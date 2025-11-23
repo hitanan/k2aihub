@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { City } from '@/types';
-import { fetchAsset } from '@/utils/assets';
+import { fetchAsset } from '@/src/utils/assets';
 
 interface VietnamMapProps {
   cities: City[];
